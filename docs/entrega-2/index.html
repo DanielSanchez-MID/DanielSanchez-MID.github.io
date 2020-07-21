@@ -90,14 +90,6 @@
   <h4>Documentación</h4>
   <ul>
     
-    <li class="">
-      <a href="https://danielsanchez-mid.github.io/docs/instalar-tema/">Instalar Tema</a>
-    </li>
-    
-    <li class="">
-      <a href="https://danielsanchez-mid.github.io/docs/configuracion/">Configuración</a>
-    </li>
-    
     <li class="active ">
       <a href="https://danielsanchez-mid.github.io/docs/entrega-2/">Fabricación Silla Fresia</a>
     </li>
@@ -112,10 +104,6 @@
     
     <li class="">
       <a href="https://danielsanchez-mid.github.io/docs/markdown/">Ejemplos Markdown</a>
-    </li>
-    
-    <li class="">
-      <a href="https://danielsanchez-mid.github.io/docs/objetivos/">Objetivos del Curso</a>
     </li>
     
   </ul>
@@ -135,14 +123,14 @@
 <p><img src="/img/MecanizadoCNC_encargo2/Angulos_silla.png" alt="Planimetría_1"></p>
 <p><img src="/img/MecanizadoCNC_encargo2/MaquinaCNC.png" alt="Planimetría_1"></p>
 <p>Esta es una silla que presenta un diseño moderno y, en este caso, simple, haciendola fácil de armar localmente.</p>
-<p>En esta publicación veremos el proceso por el que pasa esta silla para ser cortada y fabricada con una maquina generic 3 axis.</p>
+<p>En esta publicación veremos el proceso por el que pasa esta silla para ser cortada y fabricada con una máquina generic 3 axis.</p>
 <p>En este caso, la silla cuenta con 2 piezas por cada pata y 4 piezas que unen las patas con el asiento. Además, cuenta con 2 partes, que son con las que interactuamos nosotros, que son curvas, por lo que el proceso para fabricarlas cambia un poco. Estas piezas son el respaldo y el asiento.</p>
 <p>A continuación se mostrará documentación sobre el proceso en software que se debe hacer para poder hacerla con un mecanizado en CNC.</p>
 <h2 id="partes-planas">Partes planas</h2>
 <p>Lo primero que se hace es separar cada parte (sin curvatura) de la silla y colocarlas en una plancha hecha por nosotros de medidas 1220mm x 1220mm y 15mm de alto. Una vez que tenemos la plancha y las piezas dentro de esta, tenemos que seleccionar la máquina que es una generic 3 axis (esto se hace en setup). Debe quedar algo así:</p>
 <p><img src="/img/MecanizadoCNC_encargo2/1.png" alt="Planimetría_1"></p>
 <p>A continuación debemos determinar los tipos de corte que queremos hacer. Para esto vamos al menú de MANUFACTURE.</p>
-<p>El primero es el de cada espacio que tiene las piezas para el encaje. Este se hace con un contour 2D, seleccionando el brode inferior de estos espacios pequeños.Para esto se usa una fresa de 6mm de diametro. Tambien es necesario poner que el maximun roughing stepdown sea de 3mm, de esta forma se cuida la maquina y el CNC, evitando forzar demaciado la máquina. Esta opción se debe seleccionar en todas las operaciones a continuación. Lo que genera este corte es lo siguiente.</p>
+<p>El primero es el de cada espacio que tiene las piezas para el encaje. Este se hace con un contour 2D, seleccionando el borde inferior de estos espacios pequeños.Para esto se usa una fresa de 6mm de diámetro. También es necesario poner que el maximun roughing stepdown sea de 3mm, de esta forma se cuida la máquina y el CNC, evitando forzar demasiado la máquina. Esta opción se debe seleccionar en todas las operaciones a continuación. Lo que genera este corte es lo siguiente.</p>
 <p><img src="/img/MecanizadoCNC_encargo2/2.png" alt="Planimetría_1"></p>
 <div>
     <video 
@@ -152,7 +140,7 @@
     <source src="/img/video1.mov"  type="video/mp4">
     </video>
 </div>
-<p>Una vez que tenemos ese primer corte, debemos hacer las rebajas a ciertas piezas como las patas donde tienen un grosor menor a la plancha de CNC. Para esto, se utiliza 2D pocket y se selecciona la cara de esta parte más delgada, así se rebajaran estas y quedaran con los cortes correctos para unir las piezas. El resultado de esta operación es el siguiente:</p>
+<p>Una vez que tenemos ese primer corte, debemos hacer las rebajas a ciertas piezas como las patas donde tienen un grosor menor a la plancha de CNC. Para esto, se utiliza 2D pocket y se selecciona la cara de esta parte más delgada, así se rebajarán estas y quedarán con los cortes correctos para unir las piezas. El resultado de esta operación es el siguiente:</p>
 <p><img src="/img/MecanizadoCNC_encargo2/3.png" alt="Planimetría_1"></p>
 <div>
     <video 
@@ -162,7 +150,7 @@
     <source src="/img/video2.mov"  type="video/mp4">
     </video>
 </div>
-<p>Finalmente, se debe hacer con un contour 2D, seleccionando todo el contorno inferior de las piezas. Así, la máquina cortara la forma de cada pieza. Para que no se caiga la pieza y evitar problemas hay que poner tabs de 6mm. No olvidar seleccionas un maximun roughing stepdown de 3mm.</p>
+<p>Finalmente, se debe hacer con un contour 2D, seleccionando todo el contorno inferior de las piezas. Así, la máquina cortará la forma de cada pieza. Para que no se caiga la pieza y evitar problemas hay que poner tabs de 6mm. No olvidar seleccionar un maximun roughing stepdown de 3mm.</p>
 <p><img src="/img/MecanizadoCNC_encargo2/4.png" alt="Planimetría_1"></p>
 <div>
     <video 
@@ -175,11 +163,11 @@
 <p><img src="/img/MecanizadoCNC_encargo2/CNC1.jpg" alt="Planimetría_1"></p>
 <h2 id="partes-curvas-asiento">Partes curvas (asiento)</h2>
 <p>En el caso del asiento, que es curvo, se trabaja con una madera plana también, y  para poder generar esa curvatura una vez sacada de la máquina se deben crear vectores para que la máquina pase por ahí y permita darle forma posteriormente.</p>
-<p>Primero se crea una plancha (de CNC) de 9mm de alto y area que cubra la pieza y se repite el mismo proceso de las piezas anteriores con el contour 2D (no olvidar tabs de 6mm). Luego para estos vectores usamos una nueva función en el menú de 2D. Seleccionamos TRACE y aplicamos a los vectores en el asiento. Para que estos vectores no atraviensen el material completo seleccionamos en &ldquo;stock to leave: 4.5mm&rdquo;. De esta forma se corta hasta la mitad y permite darle una curvatura luego. El asiento se debería quedar de esta manera.</p>
+<p>Primero se crea una plancha (de CNC) de 9mm de alto y área que cubra la pieza y se repite el mismo proceso de las piezas anteriores con el contour 2D (no olvidar tabs de 6mm). Luego para estos vectores usamos una nueva función en el menú de 2D. Seleccionamos TRACE y aplicamos a los vectores en el asiento. Para que estos vectores no atraviesen el material completo seleccionamos en &ldquo;stock to leave: 4.5mm&rdquo;. De esta forma se corta hasta la mitad y permite darle una curvatura luego. El asiento se debería quedar de esta manera.</p>
 <p><img src="/img/MecanizadoCNC_encargo2/6.png" alt="Planimetría_1"></p>
 <p><img src="/img/MecanizadoCNC_encargo2/7.png" alt="Planimetría_1"></p>
 <p><img src="/img/MecanizadoCNC_encargo2/8.png" alt="Planimetría_1"></p>
-<p>En el video a continuación se ve como se cortan estos vectores para dalre flexibilidad al asiento y como la máquina no atraviesa todo el CNC, sino solo 4.5mm.</p>
+<p>En el video a continuación se ve cómo se cortan estos vectores para darle flexibilidad al asiento y como la máquina no atraviesa todo el CNC, sino solo 4.5mm.</p>
 <div>
     <video 
     width="100%" 
@@ -188,7 +176,7 @@
     <source src="/img/video5.mov"  type="video/mp4">
     </video>
 </div>
-<p>Luego de este proceso para las distintas piezas, las simulaciones de la máquina se verán asi, siguiedo el orden mencionado y dejando las piezas listas para ser sacadas.</p>
+<p>Luego de este proceso para las distintas piezas, las simulaciones de la máquina se verán así, siguiendo el orden mencionado y dejando las piezas listas para ser sacadas.</p>
 <div>
     <video 
     width="100%" 
