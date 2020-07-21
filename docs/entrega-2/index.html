@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Fabricación Silla Fresia - Nombre Alumno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://danielsanchez-mid.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://danielsanchez-mid.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://danielsanchez-mid.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/instalar-tema/">Instalar Tema</a>
+    </li>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/configuracion/">Configuración</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://danielsanchez-mid.github.io/docs/entrega-2/">Fabricación Silla Fresia</a>
+    </li>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/entrega-1/">Planimetrias Playwood Chair</a>
+    </li>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+    <li class="">
+      <a href="https://danielsanchez-mid.github.io/docs/objetivos/">Objetivos del Curso</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Fabricación Silla Fresia</h1>
+<div class="content ">
+  <p>Encargo 2</p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="pasos-en-fusion-360">Pasos en Fusion 360:</h2>
+<p>Una vuelta por el proceso de fabricación de la Silla Fresia.</p>
+<p><img src="/img/MecanizadoCNC_encargo2/Angulos_silla.png" alt="Planimetría_1"></p>
+<p><img src="/img/MecanizadoCNC_encargo2/MaquinaCNC.png" alt="Planimetría_1"></p>
+<p>Esta es una silla que presenta un diseño moderno y, en este caso, simple, haciendola fácil de armar localmente.</p>
+<p>En esta publicación veremos el proceso por el que pasa esta silla para ser cortada y fabricada con una maquina generic 3 axis.</p>
+<p>En este caso, la silla cuenta con 2 piezas por cada pata y 4 piezas que unen las patas con el asiento. Además, cuenta con 2 partes, que son con las que interactuamos nosotros, que son curvas, por lo que el proceso para fabricarlas cambia un poco. Estas piezas son el respaldo y el asiento.</p>
+<p>A continuación se mostrará documentación sobre el proceso en software que se debe hacer para poder hacerla con un mecanizado en CNC.</p>
+<h2 id="partes-planas">Partes planas</h2>
+<p>Lo primero que se hace es separar cada parte (sin curvatura) de la silla y colocarlas en una plancha hecha por nosotros de medidas 1220mm x 1220mm y 15mm de alto. Una vez que tenemos la plancha y las piezas dentro de esta, tenemos que seleccionar la máquina que es una generic 3 axis (esto se hace en setup). Debe quedar algo así:</p>
+<p><img src="/img/MecanizadoCNC_encargo2/1.png" alt="Planimetría_1"></p>
+<p>A continuación debemos determinar los tipos de corte que queremos hacer. Para esto vamos al menú de MANUFACTURE.</p>
+<p>El primero es el de cada espacio que tiene las piezas para el encaje. Este se hace con un contour 2D, seleccionando el brode inferior de estos espacios pequeños.Para esto se usa una fresa de 6mm de diametro. Tambien es necesario poner que el maximun roughing stepdown sea de 3mm, de esta forma se cuida la maquina y el CNC, evitando forzar demaciado la máquina. Esta opción se debe seleccionar en todas las operaciones a continuación. Lo que genera este corte es lo siguiente.</p>
+<p><img src="/img/MecanizadoCNC_encargo2/2.png" alt="Planimetría_1"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video1.mov"  type="video/mp4">
+    </video>
+</div>
+<p>Una vez que tenemos ese primer corte, debemos hacer las rebajas a ciertas piezas como las patas donde tienen un grosor menor a la plancha de CNC. Para esto, se utiliza 2D pocket y se selecciona la cara de esta parte más delgada, así se rebajaran estas y quedaran con los cortes correctos para unir las piezas. El resultado de esta operación es el siguiente:</p>
+<p><img src="/img/MecanizadoCNC_encargo2/3.png" alt="Planimetría_1"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video2.mov"  type="video/mp4">
+    </video>
+</div>
+<p>Finalmente, se debe hacer con un contour 2D, seleccionando todo el contorno inferior de las piezas. Así, la máquina cortara la forma de cada pieza. Para que no se caiga la pieza y evitar problemas hay que poner tabs de 6mm. No olvidar seleccionas un maximun roughing stepdown de 3mm.</p>
+<p><img src="/img/MecanizadoCNC_encargo2/4.png" alt="Planimetría_1"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video3.mov"  type="video/mp4">
+    </video>
+</div>
+<p><img src="/img/MecanizadoCNC_encargo2/CNC1.jpg" alt="Planimetría_1"></p>
+<h2 id="partes-curvas-asiento">Partes curvas (asiento)</h2>
+<p>En el caso del asiento, que es curvo, se trabaja con una madera plana también, y  para poder generar esa curvatura una vez sacada de la máquina se deben crear vectores para que la máquina pase por ahí y permita darle forma posteriormente.</p>
+<p>Primero se crea una plancha (de CNC) de 9mm de alto y area que cubra la pieza y se repite el mismo proceso de las piezas anteriores con el contour 2D (no olvidar tabs de 6mm). Luego para estos vectores usamos una nueva función en el menú de 2D. Seleccionamos TRACE y aplicamos a los vectores en el asiento. Para que estos vectores no atraviensen el material completo seleccionamos en &ldquo;stock to leave: 4.5mm&rdquo;. De esta forma se corta hasta la mitad y permite darle una curvatura luego. El asiento se debería quedar de esta manera.</p>
+<p><img src="/img/MecanizadoCNC_encargo2/6.png" alt="Planimetría_1"></p>
+<p><img src="/img/MecanizadoCNC_encargo2/7.png" alt="Planimetría_1"></p>
+<p><img src="/img/MecanizadoCNC_encargo2/8.png" alt="Planimetría_1"></p>
+<p>En el video a continuación se ve como se cortan estos vectores para dalre flexibilidad al asiento y como la máquina no atraviesa todo el CNC, sino solo 4.5mm.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video5.mov"  type="video/mp4">
+    </video>
+</div>
+<p>Luego de este proceso para las distintas piezas, las simulaciones de la máquina se verán asi, siguiedo el orden mencionado y dejando las piezas listas para ser sacadas.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video4.mov"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video6.mov"  type="video/mp4">
+    </video>
+</div>
+<p><strong>Este debiera ser el resultado del asiento</strong></p>
+<p>Como se puede ver, tiene estos vectores de corte en gran parte de la superficie para darle mayor flexibilidad y lograr la curvatura deseada.</p>
+<p><img src="/img/MecanizadoCNC_encargo2/CNC2.jpg" alt="Planimetría_1"></p>
+<h2 id="máquina-cnc">Máquina CNC</h2>
+<p><img src="/img/MecanizadoCNC_encargo2/MaquinaCNC2.png" alt="Planimetría_1"></p>
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//1.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//1.png" alt="1st" />
+				    </div>
+			      <figcaption>
+		          <p>1st</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//2.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//2.png" alt="2nd" />
+				    </div>
+			      <figcaption>
+		          <p>2nd</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//3.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//3.png" alt="3rd" />
+				    </div>
+			      <figcaption>
+		          <p>3rd</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//3.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//4.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//4.png" alt="4th" />
+				    </div>
+			      <figcaption>
+		          <p>4th</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//4.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//6.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//6.png" alt="6th" />
+				    </div>
+			      <figcaption>
+		          <p>6th</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//6.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//7.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//7.png" alt="7th" />
+				    </div>
+			      <figcaption>
+		          <p>7th</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//7.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//8.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//8.png" alt="8th" />
+				    </div>
+			      <figcaption>
+		          <p>8th</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//8.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//Angulos_silla.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//Angulos_silla.png" alt="Angulos silla" />
+				    </div>
+			      <figcaption>
+		          <p>Angulos silla</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//Angulos_silla.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC1.jpg');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC1.jpg" alt="C n c1" />
+				    </div>
+			      <figcaption>
+		          <p>C n c1</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC2.jpg');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC2.jpg" alt="C n c2" />
+				    </div>
+			      <figcaption>
+		          <p>C n c2</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//CNC2.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC.png" alt="Maquina c n c" />
+				    </div>
+			      <figcaption>
+		          <p>Maquina c n c</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC2.png');" >
+				      <img itemprop="thumbnail" src="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC2.png" alt="Maquina c n c2" />
+				    </div>
+			      <figcaption>
+		          <p>Maquina c n c2</p>
+			      </figcaption>
+				    <a href="https://danielsanchez-mid.github.io//img/MecanizadoCNC_encargo2//MaquinaCNC2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+<p><strong>Iframe para interactuar con la silla</strong></p>
+<div>
+    <iframe 
+    src="https://alumnos2143.autodesk360.com/shares/public/SH919a0QTf3c32634dcf7d1344a252c57916?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
