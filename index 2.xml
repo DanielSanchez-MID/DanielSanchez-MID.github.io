@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fabricación Digital on Nombre Alumno</title>
+    <link>https://danielsanchez-mid.github.io/</link>
+    <description>Recent content in Fabricación Digital on Nombre Alumno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 19:30:08 +1000</lastBuildDate>
+    
+	<atom:link href="https://danielsanchez-mid.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Planimetría: Playwood Chair</title>
+      <link>https://danielsanchez-mid.github.io/docs/entrega-1/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/entrega-1/</guid>
+      <description>Planimetrias realizadas para encargo 1</description>
+    </item>
+    
+    <item>
+      <title>Mecanizado CNC: Silla Fresia</title>
+      <link>https://danielsanchez-mid.github.io/docs/entrega-2/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/entrega-2/</guid>
+      <description>Trabajo de las piezas de una silla en Fusion 360 para cortar.</description>
+    </item>
+    
+    <item>
+      <title>Mecanizado CNC parte 2: Respaldo</title>
+      <link>https://danielsanchez-mid.github.io/docs/entrega-3/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/entrega-3/</guid>
+      <description>Trabajo del respaldo de la silla Fresia.</description>
+    </item>
+    
+    <item>
+      <title>Bonus: Molde</title>
+      <link>https://danielsanchez-mid.github.io/docs/entrega-4/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/entrega-4/</guid>
+      <description>Trabajo del respaldo de la silla Fresia.</description>
+    </item>
+    
+    <item>
+      <title>Bonus: Materiales reciclados</title>
+      <link>https://danielsanchez-mid.github.io/docs/entrega-5/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/entrega-5/</guid>
+      <description>Trabajo del respaldo de la silla Fresia.</description>
+    </item>
+    
+    <item>
+      <title>Ejemplo Shortcodes</title>
+      <link>https://danielsanchez-mid.github.io/docs/ejemplo/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/ejemplo/</guid>
+      <description>Uso de los Shortcodes para agregar contenido en el sitio de documentación.</description>
+    </item>
+    
+    <item>
+      <title>Ejemplos Markdown</title>
+      <link>https://danielsanchez-mid.github.io/docs/markdown/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://danielsanchez-mid.github.io/docs/markdown/</guid>
+      <description>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</description>
+    </item>
+    
+  </channel>
+</rss>
